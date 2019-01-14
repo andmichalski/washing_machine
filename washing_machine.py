@@ -1,7 +1,6 @@
-#!/home/pi/washing_machine/.venv/bin/python
-import time
 import RPi.GPIO as GPIO
 import datetime
+import time
 
 channel = 17
 GPIO.setmode(GPIO.BCM)
@@ -9,7 +8,7 @@ GPIO.setup(channel, GPIO.IN)
 
 
 def callback(channel):
-    time_now  = str(datetime.datetime.now())
+    time_now = str(datetime.datetime.now()) + '\n'
     with open('log.txt', 'a') as f:
         if GPIO.input(channel):
             f.write(time_now)
