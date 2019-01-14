@@ -1,5 +1,5 @@
 import unittest
-from wash_machine import callback
+from washing_machine import callback
 
 class WashMachineTests(unittest.TestCase):
 
